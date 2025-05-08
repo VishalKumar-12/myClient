@@ -12,7 +12,7 @@ const SampleViewer = () => {
     // Only fetch if user is authenticated
     if (currentUser) {
       // Fetch book info
-      fetch(`https://server-side-woad-six.vercel.app/api/books/${id}`) // Your actual backend URL
+      fetch(`https://backend-alpha-pied.vercel.app/api/books/${id}`) // Your actual backend URL
         .then(res => res.json())
         .then(data => {
           setLoading(false);
