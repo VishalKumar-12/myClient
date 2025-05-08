@@ -1,0 +1,70 @@
+/* UpdateBook.css */
+
+.update-book-container {
+    max-width: 40rem; /* max-w-lg */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto;
+    padding: 1.5rem; /* md:p-6 */
+    background-color: white; /* bg-white */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  }
+  
+  @media (max-width: 768px) {
+    .update-book-container {
+      padding: 0.75rem; /* p-3 */
+    }
+  }
+  
+  .update-book-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .error-message {
+    color: #ef4444; /* text-red-500 */
+  }
+  
+  .trending-checkbox {
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .trending-label {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .trending-input {
+    border-radius: 0.25rem; /* rounded */
+    color: #2563eb; /* text-blue-600 */
+  }
+  
+  .trending-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5); /* focus:ring focus:ring-offset-2 focus:ring-blue-500 */
+  }
+  
+  .trending-text {
+    margin-left: 0.5rem; /* ml-2 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-semibold */
+    color: #374151; /* text-gray-700 */
+  }
+  
+  .update-button {
+    width: 100%; /* w-full */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem;
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white; /* text-white */
+    font-weight: 700; /* font-bold */
+    border-radius: 0.375rem; /* rounded-md */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .update-button:hover {
+    background-color: #2563eb; /* bg-blue-600 (hover state) */
+  }

@@ -1,0 +1,125 @@
+.login-container {
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 28rem; /* max-w-sm equivalent */
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md equivalent */
+  border-radius: 0.25rem; /* rounded equivalent */
+  padding: 1.5rem 2rem 2rem; /* px-8 pt-6 pb-8 equivalent */
+  margin-bottom: 1rem; /* mb-4 equivalent */
+}
+
+.login-title {
+  font-size: 1.25rem; /* text-xl equivalent */
+  font-weight: 600; /* font-semibold equivalent */
+  margin-bottom: 1rem; /* mb-4 equivalent */
+}
+
+.form-group {
+  margin-bottom: 1rem; /* mb-4 equivalent */
+}
+
+.form-label {
+  display: block;
+  color: #4a5568; /* text-gray-700 equivalent */
+  font-size: 0.875rem; /* text-sm equivalent */
+  font-weight: 700; /* font-bold equivalent */
+  margin-bottom: 0.5rem; /* mb-2 equivalent */
+}
+
+.form-input {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow equivalent */
+  appearance: none;
+  border: 1px solid #e2e8f0; /* border equivalent */
+  border-radius: 0.25rem; /* rounded equivalent */
+  width: 100%;
+  padding: 0.5rem 0.75rem; /* py-2 px-3 equivalent */
+  line-height: 1.5; /* leading-tight equivalent */
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* focus:shadow equivalent */
+}
+
+.error-message {
+  color: #e53e3e; /* text-red-500 equivalent */
+  font-size: 0.75rem; /* text-xs equivalent */
+  font-style: italic;
+  margin-bottom: 0.75rem; /* mb-3 equivalent */
+}
+
+.login-button {
+  background-color: #4299e1; /* bg-blue-500 equivalent */
+  color: white;
+  font-weight: 700; /* font-bold equivalent */
+  padding: 0.5rem 2rem; /* py-2 px-8 equivalent */
+  border-radius: 0.25rem; /* rounded equivalent */
+}
+
+.login-button:hover {
+  background-color: #2b6cb0; /* hover:bg-blue-700 equivalent */
+}
+
+.login-button:focus {
+  outline: none;
+}
+
+.register-link {
+  vertical-align: baseline; /* align-baseline equivalent */
+  font-weight: 500; /* font-medium equivalent */
+  margin-top: 1rem; /* mt-4 equivalent */
+  font-size: 0.875rem; /* text-sm equivalent */
+}
+
+.blue-link {
+  color: #4299e1; /* text-blue-500 equivalent */
+}
+
+.blue-link:hover {
+  color: #2b6cb0; /* hover:text-blue-700 equivalent */
+}
+
+.google-signin-container {
+  margin-top: 1rem; /* mt-4 equivalent */
+}
+
+.google-button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem; /* gap-1 equivalent */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color, #4a5568); /* bg-secondary equivalent - you'll need to define this variable in your CSS or replace with actual color */
+  color: white;
+  font-weight: 700; /* font-bold equivalent */
+  padding: 0.5rem 1rem; /* py-2 px-4 equivalent */
+  border-radius: 0.25rem; /* rounded equivalent */
+}
+
+.google-button:hover {
+  background-color: #2b6cb0; /* hover:bg-blue-700 equivalent */
+}
+
+.google-button:focus {
+  outline: none;
+}
+
+.google-icon {
+  margin-right: 0.5rem; /* mr-2 equivalent */
+}
+
+.copyright {
+  margin-top: 1.25rem; /* mt-5 equivalent */
+  text-align: center;
+  color: #a0aec0; /* text-gray-500 equivalent */
+  font-size: 0.75rem; /* text-xs equivalent */
+}

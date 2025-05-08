@@ -1,0 +1,89 @@
+/* AddBook.css */
+
+/* Container styling */
+.add-book-container {
+  max-width: 40rem; /* max-w-lg equivalent */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto;
+  padding: 1.5rem; /* p-6 equivalent */
+  background-color: white; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+@media (max-width: 768px) {
+  .add-book-container {
+    padding: 0.75rem; /* p-3 at mobile */
+  }
+}
+
+/* Title styling */
+.add-book-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Checkbox styling */
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  border-radius: 0.25rem; /* rounded */
+  color: #2563eb; /* text-blue-600 */
+}
+
+.checkbox-input:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3b82f6; /* focus:ring focus:ring-offset-2 focus:ring-blue-500 */
+}
+
+.checkbox-text {
+  margin-left: 0.5rem; /* ml-2 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600; /* font-semibold */
+  color: #374151; /* text-gray-700 */
+}
+
+/* File input styling */
+.file-label {
+  display: block;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600; /* font-semibold */
+  color: #374151; /* text-gray-700 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.file-input {
+  margin-bottom: 0.5rem; /* mb-2 */
+  width: 100%; /* w-full */
+}
+
+.file-name {
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* text-gray-500 */
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%; /* w-full */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem;
+  background-color: #10b981; /* bg-green-500 */
+  color: white; /* text-white */
+  font-weight: 700; /* font-bold */
+  border-radius: 0.375rem; /* rounded-md */
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #059669; /* green-600 equivalent for hover state */
+}

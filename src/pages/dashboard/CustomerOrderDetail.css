@@ -1,0 +1,190 @@
+/* CustomerOrderDetail.css */
+
+/* Base styles */
+:root {
+    --primary-color: #3a86ff;
+    /* --secondary-color: #8338ec; */
+    --accent-color: #ff006e;
+    --success-color: #38b000;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Container styles */
+  .customer-orders-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Title styles */
+  .customer-orders-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* Loading and error states */
+  .loading-state, .error-state {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  .error-state {
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  /* No orders message */
+  .no-orders {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    border-left: 4px solid var(--secondary-color);
+  }
+  
+  /* Orders list container */
+  .customer-orders-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Individual order item */
+  .customer-order-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    position: relative;
+    border-top: 5px solid var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  .customer-order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Order number badge */
+  .customer-order-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Order ID */
+  .customer-order-id {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Order information lines */
+  .customer-order-info {
+    margin: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  .customer-order-info:before {
+    content: "•";
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+  }
+  
+  /* Section titles */
+  .customer-order-section-title {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: 600;
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 0.75rem;
+  }
+  
+  /* Address styling */
+  .customer-order-address {
+    background-color: var(--light-bg);
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Product list */
+  .customer-product-list {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  /* Product IDs */
+  .customer-product-id {
+    background-color: var(--light-bg);
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    border-left: 3px solid var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  .customer-product-id:hover {
+    background-color: rgba(58, 134, 255, 0.1);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .customer-orders-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .customer-orders-container {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .customer-orders-title {
+      font-size: 1.8rem;
+    }
+  }

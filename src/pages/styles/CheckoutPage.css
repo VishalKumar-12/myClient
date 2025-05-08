@@ -1,0 +1,234 @@
+/* CheckoutPage.css */
+:root {
+  --primary-color: #3B82F6;
+  /* --secondary-color: #10B981; */
+  --text-color: #1F2937;
+  --background-color: #F3F4F6;
+  --white: #FFFFFF;
+  --border-color: #E5E7EB;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.checkout-container {
+  max-width: 1000px;
+  margin: 0.2rem auto;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.checkout-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 0.1rem;
+  text-align: center;
+}
+
+.checkout-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F9FAFB;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.order-summary-item {
+  display: flex;
+  align-items: center;
+}
+
+.order-summary-item span {
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.checkout-form {
+  padding: 2rem;
+}
+
+.form-section-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-section-info h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form-field input {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-field input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.error-message {
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #F3F4F6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.terms-checkbox input {
+  margin-right: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.terms-checkbox label {
+  font-size: 0.875rem;
+}
+
+.terms-checkbox a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submit-button button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button button:hover:not(:disabled) {
+  background-color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button button:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.book-details {
+  background-color: #F9FAFB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.book-item:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .checkout-container {
+      margin: 1rem;
+      border-radius: 0;
+  }
+
+  .form-fields {
+      grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .order-summary-item {
+      justify-content: center;
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* Add a subtle animation to the entire page */
+@keyframes pageLoadFade {
+  from { 
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to { 
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.checkout-container {
+  animation: pageLoadFade 0.6s ease-out;
+}

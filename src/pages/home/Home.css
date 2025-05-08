@@ -1,0 +1,652 @@
+.image0-container {
+  position: absolute;
+  top: 28vh;
+  left: 0;
+  width: 99%;
+  height: 100px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity; /* Improves rendering performance */
+  
+}
+
+.background {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 32vh;
+  left: 0;
+  max-width: 99%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(100%);
+  /* transition: all 0.8s ease-in-out; */
+  background-blend-mode: multiply; /* Adds a creative effect if combined with a background image */
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  will-change: transform, opacity; /* Improves rendering performance */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .image0-container {
+      top: 65vh; /* Adjusted for smaller screens */
+      height: 80px; /* Reduced height for better fit */
+      width: 100%;
+  }
+
+  .background {
+      top: 65%; /* Adjusted position */
+      width: 100%;
+  }
+
+  video {
+      object-fit: contain; /* Ensures proper scaling on smaller devices */
+  }
+}
+
+.slider-container {
+  width: 100%; /* Full width */
+  max-width: 800px; /* Set a max width */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-img {
+  width: 100%;
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Ensures images fit properly */
+  border-radius: 10px;
+}
+
+.slick-dots li button:before {
+  color: #007bff !important;
+}
+
+/* Ensure "Popular Books" heading is aligned properly */
+h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 70vh; /* Increased space to move section lower */
+  /* padding-bottom: 5rem; */
+  animation: fadeIn 1s ease-in-out;
+  /* margin-left: auto; */
+  margin-right: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 28px; /* Smaller font for tablets */
+    margin-top: 23vh; /* Adjust position */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 22px; /* Smaller font for mobile */
+    margin-top: 40vh; /* Adjust position */
+    margin-right: 0; /* Center align */
+  }
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+/* Books Section - Grid Layout */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); /* Adapts to smaller screens */
+  gap: 15px; /* Reduces gap for better spacing */
+  padding: 15px; /* Adjusts padding for small screens */
+  justify-content: center;
+}
+
+/* Individual Book Cards */
+.book-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 100%;
+  max-width: 200px; /* Limits width for better fit on smaller screens */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+}
+
+/* Book Image */
+.book-image {
+  width: 100%;
+  height: 180px; /* Reduces height to prevent overflow */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Book Title */
+.book-card h3 {
+  font-size: 16px; /* Slightly smaller font for small screens */
+  margin: 8px 0;
+  color: #222;
+}
+
+/* Description */
+.book-card p {
+  font-size: 12px; /* Adjusted for readability */
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Price Styling */
+.book-card p strong {
+  color: #d9534f;
+}
+
+/* Button Styling */
+.book-card button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 8px;
+  transition: background 0.3s;
+}
+
+.book-card button:hover {
+  background: #0056b3;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+  .books-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Adjusts to very small screens */
+    gap: 10px;
+  }
+  
+  .book-card {
+    max-width: 180px;
+  }
+
+  .book-image {
+    height: 150px;
+  }
+
+  .book-card h3 {
+    font-size: 14px;
+  }
+
+  .book-card p {
+    font-size: 11px;
+  }
+
+  .book-card button {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
+
+
+/* Slider container styling */
+
+.slider-container {
+  position: relative; /* Allows movement using 'top' */
+  top: -20px; /* Moves it slightly upwards */
+  padding: 40px; /* Increase padding for a larger area */
+  margin: 20px auto; /* Keeps it centered */
+  width: 100%; /* Increase width to cover more space */
+  max-width: 1700px; /* Set a maximum width for responsiveness */
+  height: auto; /* Ensures the height adapts to content */
+  min-height: 250px; /* Increase height */
+  background-color: #f9f9f9;
+  border: 2px solid orangered; /* Thicker border */
+  border-radius: 15px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+}
+
+/* Slick dots (pagination) customization */
+.slick-dots li button:before {
+  font-size: 7px;
+  color: #555; /* Default dot color */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff; /* Active dot color */
+}
+
+/* Styling individual slides */
+.slider-container img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+   border-radius: 800px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.slick-slide {
+  margin: 0px; /* Remove the default margin between slides */
+}
+.slider-container img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Slick arrows (prev/next buttons) customization */
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+   /* background-color: gold; Blue background for buttons */
+   color: black;
+  border-radius: 50%; /* Circle shape */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px;
+  color:black /* White arrow icons */
+}
+.bundle-slider {
+  width: 102%;
+  max-width: 2200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px;
+  transform: scale(1.2);
+}
+
+.bundle-slider img {
+  margin: 10px; /* Adds space between images */
+  padding: 5px; /* Optional: Adds internal spacing */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+
+.bundle-slider img {
+  width: 100%; /* Make images responsive to the container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Add rounded corners to the images */
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  margin: 10 6px; /* Add spacing between images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.bundle-slider img:hover {
+  transform: scale(1.05); /* Zoom in slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+/* Slick carousel navigation buttons */
+/* .slick-prev,
+.slick-next {
+  z-index: 10;
+  color: #333;
+} */ 
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: whitesmoke; /* Blue background for buttons */
+   /* color: white;  */
+  border-radius: 50%; /* Circle shape */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px;
+  color:black /* White arrow icons */
+}
+.about {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: linear-gradient(145deg, #f5f5f5, #e0e0e0); /* Gradient background */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+.about-image {
+  /* width: 100%; */
+  max-width: 1350px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow around image */
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
+  margin-bottom: 2rem; /* Space between image and paragraph */
+}
+
+.about-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.about-title {
+  font-size: 3rem;
+  color: #3498db; /* Stylish blue color */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease-in-out;
+}
+.about-title:hover{
+transform: translateY(-6px);
+}
+.about-description {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  /* max-width: 800px; */
+  margin: 0 ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  /* padding: 0 1.5rem; */
+
+  /* Initial state (hidden and moved down) */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards; /* Initial animation */
+}
+
+/* Hover effect for cursor */
+.about-description:hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 06s ease, transform 0.6s ease;
+}
+
+
+/* Keyframes for initial fadeInUp animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem; /* Reduce padding for small screens */
+  }
+
+  .about-image {
+    max-width: 120%; /* Make image responsive */
+    margin-bottom: 1.5rem; /* Adjust spacing */
+  }
+
+  .about-title {
+    font-size: 2rem; /* Reduce font size for readability */
+    letter-spacing: 1px;
+  }
+
+  .about-description {
+    font-size: 1rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1.5rem; /* Further reduce padding */
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+    padding: 0 1rem; /* Add side padding */
+  }
+}
+
+/* Author section styles */
+.author {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.author-slider {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.author-slider h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
+}
+
+.author-slider h2:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #3498db;
+  border-radius: 2px;
+}
+
+/* Circular image styling */
+.author-slider .slick-slide {
+  padding: 15px;
+  text-align: center;
+}
+
+.author-slider .slick-slide div {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+}
+
+.author-slider .slick-slide img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 4px solid #fff;
+}
+
+.author-slider .slick-slide img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+/* Slick dots (pagination) styling */
+.author-slider .slick-dots {
+  bottom: -30px;
+}
+
+.author-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #ccc;
+  opacity: 0.7;
+}
+
+.author-slider .slick-dots li.slick-active button:before {
+  color: #3498db;
+  opacity: 1;
+}
+
+/* Arrow styling */
+.author-slider .slick-prev,
+.author-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.author-slider .slick-prev:before,
+.author-slider .slick-next:before {
+  color: #333;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.author-slider .slick-prev {
+  left: -50px;
+}
+
+.author-slider .slick-next {
+  right: -50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .author-slider .slick-prev {
+    left: -30px;
+  }
+  
+  .author-slider .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .author-slider .slick-slide img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .author-slider .slick-prev,
+  .author-slider .slick-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .author-slider .slick-prev {
+    left: -20px;
+  }
+  
+  .author-slider .slick-next {
+    right: -20px;
+  }
+  
+  .author-slider h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .author {
+    padding: 40px 0;
+  }
+  
+  .author-slider h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .author-slider .slick-slide img {
+    width: 150px;
+    height: 150px;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .author-slider h2 {
+    font-size: 22px;
+  }
+  
+  .author-slider .slick-slide img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .author-slider .slick-prev,
+  .author-slider .slick-next {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .author-slider .slick-prev:before,
+  .author-slider .slick-next:before {
+    font-size: 16px;
+  }
+}
+
+/* Add this to override React-Slick default settings for mobile */
+@media (max-width: 480px) {
+  .author-slider .slick-slide {
+    padding: 10px 5px;
+  }
+  
+  .author-slider .slick-slide img {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+  }
+  
+  .author-slider h2:after {
+    width: 50px;
+    height: 3px;
+  }
+}

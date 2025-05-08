@@ -1,0 +1,108 @@
+.fiction-books {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .fiction-book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .fiction-book-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+  }
+  
+  .fiction-book-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .fiction-book-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .fiction-book-details {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .fiction-book-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .fiction-book-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .fiction-book-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 10px;
+  }
+  
+  .fiction-add-to-cart {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .fiction-add-to-cart:hover {
+    background: #e68900;
+  }
+  .back-home-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #50C878;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin: 1px;
+}
+
+.back-home-btn:hover {
+    background-color: #0056b3;
+}
+
+.fiction-heading {
+  font-size: 40px;
+  animation: fadeIn 1s ease-in-out;
+  /* margin-left: auto; */
+  margin-right: 5%;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}

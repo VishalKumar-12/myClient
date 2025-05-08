@@ -1,0 +1,111 @@
+.action-books {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .action-book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust columns */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .action-book-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .action-book-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .action-book-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .action-book-details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .action-book-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .action-book-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .action-book-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #d32f2f;
+  }
+  
+  .action-add-to-cart {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .action-add-to-cart:hover {
+    background-color: #cc3700;
+  }
+  
+  /* Button styles */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* Title styling */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 768px) {
+    .action-book-list {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .action-book-list {
+      grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+    }
+  }
+  

@@ -1,0 +1,142 @@
+/* SignUp.css */
+
+/* Container styling */
+.signup-container {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form-container {
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.signup-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  color: #4a5568;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.75rem;
+}
+
+.error-alert {
+  color: #e53e3e;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #4299e1;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Google sign-in button */
+.btn-google {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #718096;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-google:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-google:focus {
+  outline: none;
+}
+
+.google-icon {
+  margin-right: 0.5rem;
+}
+
+/* Login link */
+.login-text {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.login-link {
+  color: #4299e1;
+}
+
+.login-link:hover {
+  color: #2b6cb0;
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 1.25rem;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.75rem;
+}
