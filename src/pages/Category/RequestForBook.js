@@ -32,7 +32,7 @@ const RequestForBook = () => {
 
   return (
     <div className="request-form-container">
-      <h2 style={{ marginTop: "5px" }}className="form-title">Request a Book</h2>
+      <h2 style={{ marginTop: "60px" }}className="form-title">Request a Book</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="isbn">ISBN:</label>
