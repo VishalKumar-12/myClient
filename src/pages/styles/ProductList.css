@@ -11,7 +11,7 @@ body {
 /* Container Layout */
 .product-list-container {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 3rem auto 0 auto;
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
