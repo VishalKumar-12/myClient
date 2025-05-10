@@ -7,13 +7,21 @@
   } */
   
   .top-sellers-title {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 38rem;      /* ⬅️ Add this to move it down slightly */
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+  @media (max-width: 767px) {
+  .top-sellers-title {
+    font-size: 1.5rem;
+    margin-top: 20rem; /* Adjust to what looks best on small screens */
     margin-bottom: 1rem;
-    color: #333;
   }
-  
+}
   .category-filter {
     display: flex;
     justify-content: center;
