@@ -17,7 +17,7 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  top: 32vh;
+  top: 20vh;
   left: 0;
   max-width: 99%;
   height: auto;
@@ -48,15 +48,21 @@ video {
   }
 
   .background {
-      top: 65%; /* Adjusted position */
-      width: 100%;
+    top: 13vh; /* Adjust vertical position for smaller screens */
+    max-width: 100%; /* Full width on small screens */
+    height: auto; /* Maintain aspect ratio */
   }
 
   video {
       object-fit: contain; /* Ensures proper scaling on smaller devices */
   }
 }
-
+@media screen and (max-width: 480px) {
+  .background {
+    top: 5vh; /* Further adjust for mobile */
+    max-height: 50vh; /* Control maximum height on very small screens */
+  }
+}
 .slider-container {
   width: 100%; /* Full width */
   max-width: 800px; /* Set a max width */
