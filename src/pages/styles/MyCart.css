@@ -217,14 +217,15 @@
 
 .cart-continue-button {
   font-weight: 500;
-  color: #4f46e5;
+  color: white;
+  background-color: green;
   margin-left: 0.25rem;
 }
 
 .cart-continue-button:hover {
-  color: #4338ca;
+  color: white;
+  background-color: blue;
 }
-
 /* Add these styles to your MyCart.css file */
 
 .cart-item-quantity-controls {
