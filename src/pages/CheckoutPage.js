@@ -112,7 +112,7 @@ const CheckoutPage = () => {
         <section>
             <div className="checkout-container">
                 <div className="checkout-header">
-                    <h2 style={{ marginTop: "5px" }}>Complete Your Purchase</h2>
+                    <h2 style={{ marginTop: "120px" }}>Complete Your Purchase</h2>
                     <p>Please review your order and fill in your details</p>
                 </div>
                 
