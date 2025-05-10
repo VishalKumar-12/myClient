@@ -59,7 +59,7 @@ video {
 }
 @media screen and (max-width: 480px) {
   .background {
-    top: 5vh; /* Further adjust for mobile */
+    top: 10vh; /* Further adjust for mobile */
     max-height: 50vh; /* Control maximum height on very small screens */
   }
 }
