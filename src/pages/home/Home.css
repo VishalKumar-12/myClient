@@ -48,7 +48,7 @@ video {
   }
 
   .background {
-    top: 13vh; /* Adjust vertical position for smaller screens */
+    top: 7vh; /* Adjust vertical position for smaller screens */
     max-width: 100%; /* Full width on small screens */
     height: auto; /* Maintain aspect ratio */
   }
@@ -59,7 +59,7 @@ video {
 }
 @media screen and (max-width: 480px) {
   .background {
-    top: 10vh; /* Further adjust for mobile */
+    top: 3vh; /* Further adjust for mobile */
     max-height: 50vh; /* Control maximum height on very small screens */
   }
 }
