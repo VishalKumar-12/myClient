@@ -10,7 +10,8 @@ export const Fiction = () => {
   const filteredBooks = books.filter(book => book._id >= 21 && book._id <= 26);
 
   return (
-    <div className="product-list-container">
+    <div  style={{ marginTop: "60px" }}
+  className="product-list-container">
       {filteredBooks.length > 0 && filteredBooks.map((book) => (
         <BookCard key={book._id} book={book} />
       ))}
