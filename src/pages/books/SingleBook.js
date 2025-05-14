@@ -77,7 +77,7 @@ const SingleBook = () => {
                     </button>
 
                     <Link to="/addtowishlist">
-                        <button onClick={() => dispatch(addToWishlist(book))} className="ml-3">
+                        <button onClick={() => dispatch(addToWishlist(book))} className="whistlist">
                             ❤️ Add to Wishlist
                         </button>
                     </Link>
