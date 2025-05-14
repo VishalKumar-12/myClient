@@ -229,8 +229,11 @@ body {
 }
 
 .user-section {
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 
 .user-menu-button {
