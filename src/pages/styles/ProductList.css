@@ -10,7 +10,6 @@ body {
 
 /* Container Layout */
 .product-list-container {
-   top: 20px;
   max-width: 1280px;
   margin: 3rem auto 0 auto;
   padding: 2rem;
