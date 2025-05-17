@@ -41,7 +41,7 @@ const SampleViewer = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div style={{ marginTop: "5px" }}>
+    <div style={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
       {url ? (
         <iframe
           src={url}
