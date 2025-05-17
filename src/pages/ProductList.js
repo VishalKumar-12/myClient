@@ -54,7 +54,7 @@ export const ProductList = () => {
 
   return (
     <div className="product-list-container">
-      {books.length > 0 && books.slice(0,32 ).map((book, index) => (
+      {books.length > 0 && books.slice(0,50 ).map((book, index) => (
         <BookCard key={book.id || index} book={book} />
       ))}
     </div>
