@@ -47,7 +47,7 @@ const SampleViewer = () => {
           src={url}
           title="Book Sample"
           width="100%"
-          height="600px"
+          height="800px"
           frameBorder="0"
         />
       ) : (
