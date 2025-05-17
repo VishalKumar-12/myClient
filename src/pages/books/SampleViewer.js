@@ -41,7 +41,7 @@ const SampleViewer = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div style={{ marginTop: "5px" }}>
       {url ? (
         <iframe
           src={url}
