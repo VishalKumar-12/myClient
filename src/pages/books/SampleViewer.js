@@ -43,7 +43,7 @@ const SampleViewer = () => {
   return (
     <div 
       style={{
-    marginTop: "40px",
+    marginTop: "80px",
     height: "100vh",
     display: "flex",
     flexDirection: "column",
